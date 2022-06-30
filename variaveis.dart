@@ -1,33 +1,44 @@
 void main() {
-  num numeroTotal;
-  int numeroInteiro;
-  double numeroFlutuante;
+  
+  //tipo number
+  num numeroNormal = 1;
+  int numeroInteiro = 2;
+  double numeroFlutuante = 1.65;
 
-  String stringNormal;
-  String stringMultiline = '''
-  Anna
-  Cecília 
-  Roncalio
-  ''';
-  print(stringMultiline);
+  //tipo string
+  String stringNormal = 'Cadeira';
+  String stringMultiline = ''' Proway 
+  Warren
+  Flutter
+  C# ''';
 
-  List<dynamic> listaNormal = [];
+  //tipo booleans
+  bool verdadeiro = true;
+  bool falso = false;
 
-  Set<int> lista = {1, 2, 3}; //lista que não repete elementos
-  print(lista);
+  //tipo lista
+  List<int> listaNumeros = [1, 2, 3, 2, 3];
+  List<String> listaString = ['Proway', 'Warren'];
+  List<dynamic> listaDiversa = ['Flutter', 26];
 
-  Map<String, dynamic> meuMapSemTipagem = {
-    'nome': 'Anna',
-    'idade': '26',
-    'altura': '1.78'
+  print(listaNumeros.where((numero) => numero < 2));
+  listaNumeros.insert(2, 5);
+  print(listaNumeros);
+
+  //tipo sets
+  Set<int> setNumero = {1, 2, 3};
+  Set<dynamic> setDiverso = {'Proway', 1};
+
+  //tipo map
+  Map<String, dynamic> mapExemplo = {
+    'Proway' : '27/06',
+    'Warren' : '06/09'
   };
 
-  // outro modo de fazer um map
-  final result = <String, dynamic>{};
-  result.addAll({'nome': 'Anna'});
-  result.addAll({'idade': '26'});
-  result.addAll({'altura': '1.78'});
+  final mapExemplo2 = <String, dynamic>{};
+    mapExemplo2.addAll({'Proway' : '27/06'});
+    mapExemplo2.addAll({'Warren' : '06/09'});
 
-  print(meuMapSemTipagem['altura']);
-  print(result['idade']);
+  print(mapExemplo['Proway']);
+  print(mapExemplo2['Warren']);
 }
