@@ -2,11 +2,11 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  //List<int> dice = [1, 2, 3, 4, 5, 6];
-
+  
   print("Qual é o seu nome?");
 
   String name = stdin.readLineSync()!;
+
 
   print("$name, quantos lados você quer que o seu dado tenha?");
 
@@ -18,13 +18,16 @@ void main() {
 
   int result = dice[round.nextInt(dice.length)];
 
-  print("$name, escolha um número e veja se você acerta o número do dado");
+
+  print("$name, escolha um número até $sizeDice e veja se você consegue prever o futuro");
 
   int number = int.parse(stdin.readLineSync()!);
 
+
   if (number == result) {
-    print("Parabéns, você acertou!");
+    print("Parabéns, vidente nato!");
   } else {
     print("Tente novamente! O dado caiu no número $result.");
   }
+
 }
