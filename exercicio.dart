@@ -8,7 +8,7 @@ void main() {
   print(mapComLista['Nomes']![2]);
 
   
-  List<dynamic> listaSetMap = [
+  List<Set<Map>> listaSetMap = [
     {
       <String, String>{'Nome' : 'Anna'},
       <String, int>{'Idade' : 26},
@@ -22,5 +22,29 @@ void main() {
     }
   ];
 
-  print(listaSetMap);
+  print(listaSetMap[0].elementAt(1)['Idade']);
+
+  void somar(double valor1, double valor2) {
+    print('A soma deu ${valor1 + valor2}');
+  }
+
+  void multiplicar(double valor1, double valor2) {
+    print('A multiplicação deu ${valor1 * valor2}');
+  }
+
+  void subtrair(double valor1, double valor2) {
+    print('A subtração deu ${valor1 - valor2}');
+  }
+
+  Calculadora calculo = subtrair;
+  calculo(10, 20);
+
+  calculo = multiplicar;
+  calculo(10, 20);
+
+  calculo = somar;
+  calculo(10, 20);
+  
 }
+
+typedef Calculadora = Function(double valor1, double valor2);

@@ -23,7 +23,6 @@ void main() {
 
   int number = int.parse(stdin.readLineSync()!);
 
-
   if (number == result) {
     print("Parabéns, vidente nato!");
   } else {
