@@ -5,4 +5,18 @@ void main() {
   };
 
   print(mapComLista['Nomes']![2]);
+
+  
+  List<dynamic> listaSetMap = [
+    {
+      <String, String>{'Nome': 'Anna'},
+      <String, int>{'Idade': 26},
+      <String, double>{'Peso' : 63}
+    },
+    {
+      <String, double>{'Altura': 1.78}
+    }
+  ];
+
+  print(listaSetMap);
 }
