@@ -60,4 +60,40 @@ void main() {
 
   // Type cast (alias)
   nota3 = (nota3 ~/ 8) as int; // fazendo cast
+
+  // incremento
+  print(nota3++); // incrementa depois
+  print(++nota3); // incrementa antes
+  nota3--;
+
+  // classe
+
+  DatasCurso cursoProway = DatasCurso('27/06/2022', '06/09/2022');
+
+  cursoProway.calcularMedia(8.0, 7.5, 9.2);
+  cursoProway.parabenizar();
+
+  // cascade notation (notação em cascata)
+
+  cursoProway
+    ..dataInicio = '23/08/2022'
+    ..dataFinal = '06/09/2022'
+    ..calcularMedia(5.0, 8.0, 9.5)
+    ..parabenizar();
+}
+
+class DatasCurso {
+  String? dataInicio;
+  String? dataFinal;
+  
+  DatasCurso(this.dataInicio, this.dataFinal);
+
+  void calcularMedia(nota1, nota2, nota3) {
+    double notaFinal = (nota1 + nota2 + nota3) / 3;
+    print('Sua média do curso foi: ${notaFinal.toStringAsFixed(1)}');
+  }
+
+  void parabenizar() {
+    print('Parabéns!!');
+  }
 }
