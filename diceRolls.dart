@@ -1,11 +1,11 @@
-import 'dart:io';
-import 'dart:math';
+import 'dart:io' as input;
+import 'dart:math' as math;
 
 void main() {
   
   print('Quantas vezes você quer jogar o dado?');
-  int inputNumber = int.parse(stdin.readLineSync()!);
-  
+  int inputNumber = int.parse(input.stdin.readLineSync()!);
+
   List<int> dice = [1, 2, 3, 4, 5, 6];
 
   List<int> diceRolls = [];
@@ -13,9 +13,8 @@ void main() {
   int countRolls;
 
   for (countRolls = 0; countRolls < inputNumber; countRolls++) {
-    Random round = Random();
-
-    int result = dice[round.nextInt(dice.length)];
+    
+    int result = dice[math.Random().nextInt(dice.length)];
 
     diceRolls.add(result);
   }
@@ -24,7 +23,7 @@ void main() {
 
   diceRolls.forEach((x) => occurrenceSum[x] =
       !occurrenceSum.containsKey(x) ? (1) : (occurrenceSum[x] + 1));
-  
+
   print('Total de $countRolls jogadas');
   print('O número 1 apareceu ${occurrenceSum[1]} vezes');
   print('O número 2 apareceu ${occurrenceSum[2]} vezes');

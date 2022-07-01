@@ -1,27 +1,27 @@
-import 'dart:io';
-import 'dart:math';
+import 'dart:io' as input;
+import 'dart:math' as math;
 
 void main() {
   
   print("Qual é o seu nome?");
 
-  String name = stdin.readLineSync()!;
+  String name = input.stdin.readLineSync()!;
 
 
   print("$name, quantos lados você quer que o seu dado tenha?");
 
-  int sizeDice = int.parse(stdin.readLineSync()!);
+  int sizeDice = int.parse(input.stdin.readLineSync()!);
 
   List<int> dice = new List<int>.generate(sizeDice, (i) => i + 1);
 
-  Random round = Random();
+  math.Random round = math.Random();
 
   int result = dice[round.nextInt(dice.length)];
 
 
   print("$name, escolha um número até $sizeDice e veja se você consegue prever o futuro");
 
-  int number = int.parse(stdin.readLineSync()!);
+  int number = int.parse(input.stdin.readLineSync()!);
 
   if (number == result) {
     print("Parabéns, vidente nato!");
