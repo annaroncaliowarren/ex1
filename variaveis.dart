@@ -10,11 +10,16 @@ void main() {
 
   //tipo string
   String stringNormal = 'Cadeira';
-  String stringMultiline = ''' Proway 
-  Warren
-  Flutter
-  C# ''';
-    
+  String stringMultiline = '''Proway Warren Flutter''';
+  print('Anna \nCecília \nRoncalio');
+  print(stringMultiline.trim());
+  print(stringNormal.contains('d'));
+  print(stringNormal.toUpperCase());
+  print(stringMultiline.split(' ')[1]); // vira uma lista e pode procurar elementos por index
+  print(stringNormal.indexOf('eira'));
+  print(stringMultiline.replaceAll('Warren', 'warren'));
+  print(stringNormal.substring(3, 5));
+ 
   //tipo booleans
   bool verdadeiro = true;
   bool falso = false;
