@@ -1,5 +1,6 @@
 void main() {
   
+  // Map com lista como item
   Map<String, List<dynamic>> mapComLista = {
     'Nomes': <String>['Anna', 'João', 'Magda'],
     'Idade': <int>[26, 22, 54]
@@ -7,7 +8,7 @@ void main() {
 
   print(mapComLista['Nomes']![2]);
 
-  
+  // lista de sets, cada set tem maps de 1 item
   List<Set<Map>> listaSetMap = [
     {
       <String, String>{'Nome' : 'Anna'},
@@ -24,6 +25,7 @@ void main() {
 
   print(listaSetMap[0].elementAt(1)['Idade']);
 
+  // typedef
   void somar(double valor1, double valor2) {
     print('A soma deu ${valor1 + valor2}');
   }
