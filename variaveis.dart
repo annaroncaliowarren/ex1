@@ -38,6 +38,7 @@ void main() {
   print(listaNumeros.where((numero) => numero < 2)); // volta o elemento se for true, se for false volta vazio
   print(listaNumeros.any((numero) => numero < 2)); // true or false
   listaNumeros.insert(2, 5); // insere elemento 5 no index 2 (index, elemento)
+  print(listaNumeros.sublist(1,3));
   
   //tipo sets
   Set<int> setNumero = {1, 2, 3};

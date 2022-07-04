@@ -66,6 +66,19 @@ void main() {
   print(++nota3); // incrementa antes
   nota3--;
 
+  // Spread Operator
+  List nomes = ['Anna', 'João', 'Magda'];
+  List idades = [26, 22, 54];
+
+  List tudoJunto = [
+    'Nomes:',
+    ...nomes,
+    'Idades:',
+    ...idades
+  ];
+
+  print(tudoJunto);
+
   // classe
 
   DatasCurso cursoProway = DatasCurso('27/06/2022', '06/09/2022');
