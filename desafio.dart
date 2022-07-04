@@ -12,7 +12,12 @@ void main() {
 
   int inputSizeDice = int.parse(input.stdin.readLineSync()!);
 
-  print('Dado criado!');
+  // if (inputSizeDice) {
+  //   print('Apenas números inteiros.');
+  //   continue;
+  // } else {
+  //   print('Dado criado!');
+  // }
   
   while (true) {
     input.stdout.write('Digite jogar quando quiser que o dado role: ');
